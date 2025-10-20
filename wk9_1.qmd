@@ -22,8 +22,6 @@ library(ggpubr)
 
 ## 
 
-![](images/Untitled design.png)
-
 ## **Learning objectives:**
 
 -   Develop a statistical hypothesis for a given research question

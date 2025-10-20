@@ -1,0 +1,12 @@
+---
+title: "Inferential Statistics"
+echo: TRUE
+format:
+  revealjs: 
+    theme: dark
+    code-line-numbers: false
+---
+
+## **Learning objectives:**
+
+##  {.unnumbered}

@@ -1,0 +1,46 @@
+---
+title: "Conditional Transformations"
+echo: TRUE
+format:
+  revealjs: 
+    theme: dark
+    code-line-numbers: false
+---
+
+## Objectives {.unnumbered}
+
+Aim: generate a vector where each element is determined by the value of one or multiple conditions (\~ comparisons).
+
+-   one condition: use `if_else()`
+    -   `if_else(condition, true, false, missing = NULL)`
+-   multiple (hierarchical) conditions: use `case_when(..., .default = NULL)`.
+    -   the *first* condition that is `TRUE` for an element determines the outcome for that element.
+
+## Conditional transformations (2) {.unnumbered}
+
+```{r}
+x <- c(-3:3, NA)
+if_else(x > 0, "+ve", "-ve", "???")
+```
+
+## Conditional transformations (3) {.unnumbered}
+
+```{r}
+x <- c(-3:3, NA)
+case_when(
+  x == 0   ~ "0",
+  x < 0    ~ "-ve", 
+  x > 0    ~ "+ve",
+  is.na(x) ~ "???"
+)
+```
+
+## Conditional transformations (4) {.unnumbered}
+
+The different outcomes must be **compatible types**!
+
+Some examples:
+
+-   numerical and logical
+-   strings and factors.
+-   `NA` is compatible with everything.
